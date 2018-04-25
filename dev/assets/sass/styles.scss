@@ -1,0 +1,16 @@
+//@import "includes/_settings";
+@import "./includes/_fonts.scss";
+//@import "includes/_mixins";
+//@import "includes/_icons";
+//@import "includes/_grid";
+
+/*main styles*/
+body {
+  margin: 0; }
+
+/*Main styles ends*/
+
+@import "../../components/header/_header.scss";
+
+
+
