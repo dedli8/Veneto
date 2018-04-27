@@ -1,0 +1,80 @@
+/*header first column styles starts*/
+
+.header-first-column {
+  font-size: 12px;
+  display: none;
+  flex-direction: column;
+  margin-right: 2.5%;
+  @include media ($width-max) {
+    font-size: 14px;
+  }
+  @include media ($width-mid) {
+    display: flex;
+  }
+  .sales {
+    display: none;
+    color: #fa0c3f;
+    margin-bottom: 17px;
+    @include media($width-mid) {
+      display: block;
+    }
+    @include media($width-max) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .sales > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .icon-star {
+    background-image: url(img/star_icon.svg);
+    background-size: 13px 11px;
+    width: 13px;
+    height: 11px;
+    margin-right: 3px;
+    @include media($width-max) {
+      background-image: url(img/star_icon.svg);
+      background-size: 15px 14px;
+      width: 15px;
+      height: 14px;
+    }
+  }
+  .stock {
+    margin-right: 13px;
+    @include media($width-max) {
+      margin-right: 20px;
+    }
+  }
+
+  .stock > * {
+    display: inline-block;
+  }
+
+  .stock a:last-child {
+    padding-bottom: 1px;
+  }
+
+  .installment {
+    color: #0075be;
+  }
+
+  .installment > * {
+    vertical-align: middle;
+  }
+
+  .installment span:first-child {
+    margin-right: 3px;
+  }
+
+  .logo {
+    width: 168px;
+    height: 22px;
+    @include media($width-max) {
+      width: 198px;
+      height: 26px;
+    }
+  }
+}
+
+/*header column header styles ends*/

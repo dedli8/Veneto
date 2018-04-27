@@ -1,3 +1,5 @@
+//header styles starts
+
 .header {
   font-family: 'PragmaticaBook-Reg', sans-serif;
   color: #6d7c90;
@@ -5,239 +7,308 @@
   padding-bottom: 36px;
   border-bottom: 1px solid #e3e6e9;
   margin-bottom: 30px;
- img {
-    max-width: none;
+  @include media($width-sm) {
+    padding-bottom: 72px;
+    margin-bottom: 60px;
+    padding-top: 50px;
   }
-  a {
-    display: inline-block;
-    text-decoration: none;
-    color: inherit;
+  @include media($width-mid) {
+    padding-bottom: 12px;
+    margin-bottom: 10px;
+    border-color: #0075be;
+    padding-top: 20px;
   }
-
-  input {
-    outline: none;
-    border: none;
-  }
-
-  .container {
-    margin: 0 auto;
-    padding: 0 4px;
-  }
-
   .wrap {
     display: block;
+    @include media($width-mid) {
+      display: flex;
+    }
   }
 
-  /*first column header styles starts*/
-  .header-first-column {
-    font-size: 12px;
-    display: none;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-right: 2.5%;
-  }
+  @import "__headerfirstcolumn/__headerfirstcolumn";
 
-  .sales {
-    display: none;
-    color: #fa0c3f;
-    margin-bottom: 17px;
-  }
+  /*header second column styles starts*/
 
-  .sales > * {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  .stock {
-    margin-right: 13px;
-  }
-
-  .stock > * {
-    display: inline-block;
-  }
-
-  .stock a:last-child {
-    padding-bottom: 1px;
-  }
-
-  .installment {
-    color: #0075be;
-  }
-
-  .installment > * {
-    vertical-align: middle;
-  }
-
-  .installment span:first-child {
-    margin-right: 3px;
-  }
-
-  .logo {
-    width: 198px;
-    height: 26px;
-  }
-
-  /*second column header styles start*/
   .header-second-column {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     font-size: 0;
+    @include media($width-mid) {
+      flex-direction: column;
+      width: 100%;
+    }
   }
-
-  .menuicon {
+  .menu-icon {
     background-image: url(img/menuicon.svg);
     background-size: 33px 25px;
     width: 33px;
     height: 25px;
+    @include media($width-xs) {
+      background-image: url(img/menuicon.svg);
+      background-size: 44px 33px;
+      width: 44px;
+      height: 33px;
+    }
+    @include media($width-sm) {
+      background-size: 87px 66px;
+      width: 87px;
+      height: 66px;
+    }
+    @include media($width-mid) {
+      display: none;
+    }
   }
 
-  /*first row header styles starts*/
+  /*header second column first row styles start*/
+
   .header-first-row {
     display: none;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
     align-items: flex-start;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 100%;
+    @include media($width-mid) {
+      display: flex;
+      margin-bottom: 15px;
+    }
+    @include media($width-max) {
+      align-items: self-start;
+      margin-bottom: 12px;
+    }
   }
-
   .header-first-row > * {
     display: inline-block;
     vertical-align: middle;
     font-size: 12px;
+    @include media($width-max) {
+      font-size: 14px;
+    }
+
   }
 
-  .first-row-menu {
-    display: block;
-    padding: 0;
-    font-size: 0;
-  }
-
-  .first-row-menu-item {
-    font-size: 12px;
-    list-style: none;
-    display: inline-block;
-    margin-right: 15px;
-  }
-
-  .first-row-menu-item:last-child {
-    margin-right: 0;
-  }
+  @import "__mainmenu/_mainmenu";
 
   .mobile-logo {
     width: 158px;
     height: 22px;
     margin-right: 3px;
+    @include media($width-xs) {
+      width: 210px;
+      height: 29px;
+      margin-right: 0px;
+    }
+    @include media($width-sm) {
+      width: 419px;
+      height: 57px;
+      margin-right: 0px;
+    }
+    @include media($width-mid) {
+      display: none;
+    }
   }
-
   .phones {
     font-size: 0px;
     display: block;
   }
-
-  .phoneicon {
+  .phone-icon {
     background-image: url(img/phoneicon.svg);
     width: 39px;
     height: 35px;
     background-size: 39px 35px;
     background-position: center;
     background-repeat: no-repeat;
+    @include media($width-xs) {
+      width: 52px;
+      height: 46px;
+      background-size: 52px 46px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+    @include media($width-sm) {
+      width: 106px;
+      height: 91px;
+      background-size: 79px 79px;
+      margin-right: 20px;
+      margin-left: 20px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      border-left: 1px solid #7fbade;
+      border-right: 1px solid #7fbade;
+    }
+    @include media($width-mid) {
+      display: none;
+    }
   }
-
   .phones > * {
     display: inline-block;
     margin-right: 20px;
   }
-
-  .phone-box > * {
+  .phone-wrap {
+    @include media($width-max) {
+      margin-right: 10px;
+    }
+  }
+  .phone-wrap > * {
     display: inline-block;
     vertical-align: middle;
     font-size: 0;
   }
-
-  .phone-box:last-child {
+  .phone-wrap:last-child {
     margin-right: 0;
   }
-
-  .phone-box span:nth-child(2) {
+  .phone-wrap span:nth-child(2) {
     font-size: 12px;
+    @include media($width-max) {
+      font-size: 15px;
+    }
   }
-
-  .phone-box span:first-child {
+  .phone-wrap span:first-child {
     margin-right: 10px;
   }
-
-  .authorisation {
-    display: block;
+  .kievstar-icon {
+    background-image: url(img/kievstar.svg);
+    background-size: 20px 19px;
+    width: 20px;
+    height: 19px;
+    @include media($width-max) {
+      background-image: url(img/kievstar.svg);
+      background-size: 24px 22px;
+      width: 24px;
+      height: 22px;
+    }
   }
-
+  .lifecell-icon {
+    background-image: url(img/lifecell.svg);
+    background-size: 18px 19px;
+    width: 18px;
+    height: 19px;
+    @include media($width-max) {
+      background-size: 21px 23px;
+      width: 21px;
+      height: 23px;
+    }
+  }
+  .vodafone-icon {
+    background-image: url(img/vodafone.svg);
+    background-size: 17px 17px;
+    width: 17px;
+    height: 17px;
+    @include media($width-max) {
+      background-image: url(img/vodafone.svg);
+      background-size: 20px 20px;
+      width: 20px;
+      height: 20px;
+    }
+  }
   .authorisation > * {
     font-family: "PragmaticaBook-Reg";
     display: inline-block;
     vertical-align: bottom;
     color: #0075be;
   }
-
+  .authorisation {
+    display: block;
+    @include media($width-max) {
+      margin-left: 12%;
+    }
+  }
+  .avatar-icon {
+    background-image: url(img/avatar.svg);
+    background-size: 15px 17px;
+    width: 15px;
+    height: 17px;
+    @include media($width-max) {
+      background-size: 18px 20px;
+      width: 18px;
+      height: 20px;
+      margin-right: 11px;
+    }
+  }
   .city {
     font-size: 14px;
     border-bottom: 1px dashed #0075be;
     margin-right: 13px;
+    @include media($width-mid) {
+      margin-right: 20px;
+    }
+    @include media($width-max) {
+      margin-right: 24px;
+    }
   }
-
   .language {
     font-size: 11px;
+    @include media($width-mid) {
+      padding-right: 8px;
+    }
+    @include media($width-max) {
+      font-size: 13px;
+      padding-right: 1px;
+    }
   }
 
-  /*first row second column header styles ends*/
-  /*second row second column header styles starts*/
+  /*header second column first row styles ends*/
+
+  /*header second column second row styles starts*/
+
   .header-second-row {
     font-family: 'Days', sans-serif;
     font-size: 11px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     padding-right: 13px;
+    @include media($width-sm) {
+      padding-right: 50px;
+      margin-left: 10px;
+    }
+    @include media($width-mid) {
+      justify-content: space-between;
+      width: 100%;
+      padding-right: 0;
+      margin-left: 0;
+    }
+    @include media($width-max) {
+      font-size: 13px;
+    }
   }
 
-  .nav-menu {
-    display: none;
-    //margin-right: 40px;
-  }
+  @import "__goodsmenu/_goodsmenu";
 
-  .nav-menu-item {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 31px;
+  .search-mobile-icon {
+    background-image: url(img/mobilesearchicon.svg);
+    width: 30px;
+    height: 30px;
+    background-size: 30px 30px;
+    @include media($width-xs) {
+      background-image: url(img/mobilesearchicon.svg);
+      width: 39px;
+      height: 39px;
+      background-size: 39px 39px;
+    }
+    @include media($width-sm) {
+      background-image: url(img/mobilesearchicon.svg);
+      width: 77px;
+      height: 77px;
+      background-size: 77px 77px;
+    }
+    @include media($width-mid) {
+      display: none;
+    }
   }
-
-  .nav-menu-item:last-child {
-    margin-right: 0;
-  }
-
   .search-box {
     height: 23px;
     display: none;
     width: 23.230769%;
     position: relative;
+    @include media($width-mid) {
+      display: inline-block;
+      width: 21.230769%;
+    }
+    @include media($width-max) {
+      height: 30px;
+      width: 10%;
+    }
   }
-
   .search-area {
     height: 23px;
     padding-right: 23px;
@@ -248,25 +319,32 @@
     background: none;
     z-index: 3;
     margin-right: 0;
-    -webkit-transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
     transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
     cursor: pointer;
+    @include media($width-max) {
+      height: 30px;
+      padding-right: 30px;
+    }
+    &:focus {
+      padding-left: 50%;
+      background: white;
+      width: 165%;
+      z-index: 1;
+      cursor: text;
+      padding-top: 2px;
+      border: 1px solid #ebebeb;
+      border-right: none;
+      border-radius: 15px;
+      box-sizing: border-box;
+      @include media($width-midmax) {
+        width: 100%
+      }
+      @include media($width-max) {
+        width: 250%;
+      }
+    }
   }
-
-  .search-area:focus {
-    padding-left: 50%;
-    background: white;
-    width: 165%;
-    z-index: 1;
-    cursor: text;
-    padding-top: 2px;
-    border: 1px solid #ebebeb;
-    border-right: none;
-    border-radius: 15px;
-    box-sizing: border-box;
-  }
-
-  .icon-search_icon {
+  .icon-search {
     text-indent: -10000px;
     position: absolute;
     top: 0;
@@ -274,41 +352,105 @@
     z-index: 2;
     cursor: pointer;
     opacity: 0.6;
-    -webkit-transition: opacity .4s ease;
     transition: opacity .4s ease;
+    width: 23px;
+    height: 23px;
+    box-sizing: border-box;
+    border: 1px solid #ebebeb;
+    border-radius: 15px;
+    background-image: url(img/search_icon.svg);
+    background-size: 10px 9px;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include media($width-max) {
+      background-size: 13px 13px;
+      width: 30px;
+      height: 30px;
+    }
+    &:hover {
+      opacity: 1;
+    }
   }
-
-  .icon-search_icon:hover {
-    opacity: 1;
-  }
-
-  .market-court-box {
-    font-size: 0px;
-  }
-
   .our-markets-box {
     display: none;
     color: #0075be;
     font-family: 'PragmaticaBook-Reg', sans-serif;
     font-size: 0px;
     margin-right: 10px;
+    @include media($width-mid) {
+      display: inline-block;
+    }
+    @include media($width-max) {
+      display: none;
+    }
   }
-
+  .marker-cart-box .our-markets-box {
+    @include media($width-mid) {
+      display: none;
+    }
+    @include media($width-max) {
+      display: inline-block;
+      margin-right: 12px;
+    }
+  }
   .our-markets-box > * {
     display: inline-block;
     vertical-align: middle;
     font-size: 12px;
   }
-
+  .marker-cart-box .our-markets-box > * {
+    @include media($width-max) {
+      font-size: 14px;
+    }
+  }
+  .pin-icon {
+    background-image: url(img/pin_icon.svg);
+    background-size: 9px 12px;
+    width: 9px;
+    height: 12px;
+    margin-right: 7px;
+    @include media($width-max) {
+      background-image: url(img/pin_icon.svg);
+      background-size: 13px 17px;
+      width: 13px;
+      height: 17px;
+      margin-right: 7px;
+    }
+  }
   .cart {
     position: relative;
   }
-
   .cart > * {
     display: inline-block;
     vertical-align: middle;
   }
-
+  .cart-icon {
+    background-image: url(img/mobilecarticon.svg);
+    background-size: 33px 30px;
+    width: 33px;
+    height: 30px;
+    @include media($width-xs) {
+      background-size: 44px 39px;
+      width: 44px;
+      height: 39px;
+    }
+    @include media($width-sm) {
+      background-size: 87px 77px;
+      width: 87px;
+      height: 77px;
+    }
+    @include media($width-mid) {
+      background-image: url(img/cart_icon.svg);
+      background-size: 18px 17px;
+      width: 18px;
+      height: 17px;
+    }
+    @include media($width-max) {
+      background-size: 22px 20px;
+      width: 22px;
+      height: 20px;
+    }
+  }
   .court-counter {
     position: absolute;
     top: -11px;
@@ -323,122 +465,8 @@
     border-radius: 35px;
     text-align: center;
     padding-top: 5px;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-  }
-
-  /*second row header styles end*/
-  /*second column header ends*/
-  /*icons styles starts*/
-  .icon {
-    display: inline-block;
-  }
-
-  .icon-avatar {
-    background-image: url(img/avatar.svg);
-    background-size: 15px 17px;
-    width: 15px;
-    height: 17px;
-  }
-
-  .icon-cart_icon {
-    background-image: url(img/mobilecarticon.svg);
-    background-size: 33px 30px;
-    width: 33px;
-    height: 30px;
-  }
-
-  .icon-kievstar {
-    background-image: url(img/kievstar.svg);
-    background-size: 20px 19px;
-    width: 20px;
-    height: 19px;
-  }
-
-  .icon-lifecell {
-    background-image: url(img/lifecell.svg);
-    background-size: 18px 19px;
-    width: 18px;
-    height: 19px;
-  }
-
-  .icon-pin_icon {
-    background-image: url(img/pin_icon.svg);
-    background-size: 9px 12px;
-    width: 9px;
-    height: 12px;
-    margin-right: 7px;
-  }
-
-  .icon-search_icon {
-    position: absolute;
-    top: -1px;
-    right: 0;
-    width: 23px;
-    height: 23px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border: 1px solid #ebebeb;
-    border-radius: 15px;
-    background-image: url(img/search_icon.svg);
-    background-size: 10px 9px;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  .icon-star_icon {
-    background-image: url(img/star_icon.svg);
-    background-size: 13px 11px;
-    width: 13px;
-    height: 11px;
-    margin-right: 3px;
-  }
-
-  .icon-vodafone {
-    background-image: url(img/vodafone.svg);
-    background-size: 17px 17px;
-    width: 17px;
-    height: 17px;
-  }
-
-  .mobilesearchicon {
-    background-image: url(img/mobilesearchicon.svg);
-    width: 30px;
-    height: 30px;
-    background-size: 30px 30px;
-  }
-
-  @media screen and (min-width: 480px) {
-    .menuicon {
-      background-image: url(img/menuicon.svg);
-      background-size: 44px 33px;
-      width: 44px;
-      height: 33px;
-    }
-    .mobile-logo {
-      width: 210px;
-      height: 29px;
-      margin-right: 0px;
-    }
-    .mobilesearchicon {
-      background-image: url(img/mobilesearchicon.svg);
-      width: 39px;
-      height: 39px;
-      background-size: 39px 39px;
-    }
-    .phoneicon {
-      width: 52px;
-      height: 46px;
-      background-size: 52px 46px;
-      margin-right: 10px;
-      margin-left: 10px;
-    }
-    .icon-cart_icon {
-      background-size: 44px 39px;
-      width: 44px;
-      height: 39px;
-    }
-    .court-counter {
+    @include media($width-xs) {
       top: -14px;
       right: -13px;
       width: 33px;
@@ -446,50 +474,7 @@
       font-size: 17px;
       padding-top: 7px;
     }
-  }
-
-  @media screen and (min-width: 940px) {
-    .header {
-      padding-bottom: 72px;
-      margin-bottom: 60px;
-      padding-top: 50px;
-    }
-    .container{
-      max-width: 940px;
-    }
-    .menuicon {
-      background-size: 87px 66px;
-      width: 87px;
-      height: 66px;
-    }
-    .mobile-logo {
-      width: 419px;
-      height: 57px;
-      margin-right: 0px;
-    }
-    .phoneicon {
-      width: 106px;
-      height: 91px;
-      background-size: 79px 79px;
-      margin-right: 20px;
-      margin-left: 20px;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      border-left: 1px solid #7fbade;
-      border-right: 1px solid #7fbade;
-    }
-    .mobilesearchicon {
-      background-image: url(img/mobilesearchicon.svg);
-      width: 77px;
-      height: 77px;
-      background-size: 77px 77px;
-    }
-    .icon-cart_icon {
-      background-size: 87px 77px;
-      width: 87px;
-      height: 77px;
-    }
-    .court-counter {
+    @include media($width-sm) {
       top: -17px;
       right: -48px;
       width: 65px;
@@ -497,88 +482,7 @@
       font-size: 34px;
       padding-top: 14px;
     }
-    .header-second-row {
-      padding-right: 50px;
-      margin-left: 10px;
-    }
-  }
-
-  @media screen and (min-width: 1215px) {
-    .container {
-      padding: 0;
-      .container{
-        max-width: 1215px;
-      }
-    }
-    .header {
-      padding-bottom: 15px;
-      margin-bottom: 15px;
-      border-color: #0075be;
-      padding-top: 20px;
-    }
-    .wrap {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-    }
-    .menuicon {
-      display: none;
-    }
-    .logo {
-      width: 168px;
-      height: 22px;
-    }
-
-    .header-first-column {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-    }
-    .header-second-column {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-      flex-direction: column;
-      width: 100%;
-    }
-    .sales {
-      display: block;
-    }
-    .mobile-logo {
-      display: none;
-    }
-    .phoneicon {
-      display: none;
-    }
-    .our-markets-box {
-      display: inline-block;
-    }
-    .marker-cart-box .our-markets-box {
-      display: none;
-    }
-    .nav-menu {
-      display: inline-block;
-    }
-    .language{
-      padding-right: 8px;
-    }
-    .city{
-      margin-right: 20px;
-    }
-    .search-box {
-      display: inline-block;
-      width: 23.230769%;
-    }
-    .mobilesearchicon {
-      display: none;
-    }
-    .icon-cart_icon {
-      background-image: url(img/cart_icon.svg);
-      background-size: 18px 17px;
-      width: 18px;
-      height: 17px;
-    }
-    .court-counter {
+    @include media($width-mid) {
       position: relative;
       right: 0;
       top: 0;
@@ -590,146 +494,7 @@
       text-align: center;
       padding-top: 3px;
     }
-    .header-first-row {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      margin-bottom: 15px;
-    }
-    .header-second-row {
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      width: 100%;
-      padding-right: 0;
-      margin-left: 0;
-    }
-  }
-  @media screen and (min-width: 1350px) {
-    .search-area:focus{
-      width: 100%
-    }
-  }
-  @media screen and (min-width: 1430px) {
-    .container{
-      max-width: 1430px;
-    }
-    .header-first-column {
-      font-size: 14px;
-    }
-    .header-first-row{
-      align-items: self-start;
-      margin-bottom: 12px;
-    }
-    .logo {
-      width: 198px;
-      height: 26px;
-    }
-    .sales{
-      margin-bottom: 20px;
-    }
-    .header-first-row > * {
-      font-size: 14px;
-    }
-    .icon-star_icon {
-      background-image: url(img/star_icon.svg);
-      background-size: 15px 14px;
-      width: 15px;
-      height: 14px;
-    }
-    .stock{
-      margin-right: 20px;
-    }
-    .first-row-menu{
-      margin: 0;
-    }
-    .first-row-menu-item {
-      font-size: 14px;
-    }
-    .icon-vodafone {
-      background-image: url(img/vodafone.svg);
-      background-size: 20px 20px;
-      width: 20px;
-      height: 20px;
-    }
-    .icon-kievstar {
-      background-image: url(img/kievstar.svg);
-      background-size: 24px 22px;
-      width: 24px;
-      height: 22px;
-    }
-    .icon-lifecell {
-      background-size: 21px 23px;
-      width: 21px;
-      height: 23px;
-    }
-    .phone-box{
-      margin-right: 10px;
-    }
-    .phone-box span:nth-child(2) {
-      font-size: 15px;
-    }
-    .icon-pin_icon {
-      background-image: url(img/pin_icon.svg);
-      background-size: 13px 17px;
-      width: 13px;
-      height: 17px;
-      margin-right: 7px;
-    }
-    .header-second-row {
-      font-size: 13px;
-    }
-    .marker-cart-box .our-markets-box {
-      display: inline-block;
-      font-size: 14px;
-      margin-right: 23px;
-    }
-    .city {
-      font-size: 14px;
-      margin-right: 24px;
-    }
-    .our-markets-box {
-      display: none;
-    }
-    .authorisation {
-      margin-left: 12%;
-    }
-    .icon-avatar {
-      background-size: 18px 20px;
-      width: 18px;
-      height: 20px;
-        margin-right: 11px;
-    }
-    .language {
-      font-size: 13px;
-      padding-right: 1px;
-    }
-    .search-box {
-      height: 30px;
-      width: 10%;
-    }
-    .nav-menu-item {
-      margin-right: 33px;
-    }
-    .search-area {
-      height: 30px;
-      padding-right: 30px;
-    }
-    .search-area:focus{
-      width: 250%;
-    }
-
-    .icon-search_icon {
-      background-size: 13px 13px;
-      width: 30px;
-      height: 30px;
-    }
-    .icon-cart_icon {
-       background-size: 22px 20px;
-       width: 22px;
-       height: 20px;
-     }
-    .court-counter {
+    @include media($width-max) {
       width: 30px;
       height: 30px;
       font-size: 10px;
@@ -737,6 +502,10 @@
     }
   }
 
-  /*icons styles ends*/
-  /*header end*/
+  /*header second column second row styles end*/
+
+  /*header second column styles ends*/
+
 }
+
+/*header end*/

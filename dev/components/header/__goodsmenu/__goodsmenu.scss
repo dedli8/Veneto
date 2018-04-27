@@ -1,0 +1,75 @@
+//goods menu styles starts
+
+.goods-menu {
+  display: none;
+  position: relative;
+  @include media($width-mid) {
+    display: inline-block;
+  }
+  .goods-menu-item {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 31px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      color: #0075be;
+    }
+    @include media($width-max) {
+      margin-right: 33px;
+    }
+  }
+  .goods-menu-dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 370px/673px*100%;
+    z-index: 2;
+  }
+  .goods-menu-item:hover + .goods-menu-dropdown {
+    display: block;
+  }
+  .goods-menu-arrowup {
+    display: none;
+    background-color: white;
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    top: 30px;
+    left: 43%;
+    border-left: 1px solid #0075be;
+    border-top: 1px solid #0075be;
+    transform: rotate(45deg);
+  }
+  .goods-menu-item:hover .goods-menu-arrowup {
+    display: block;
+  }
+  .goods-menu-dropdown-item {
+    display: inline-block;
+    vertical-align: top;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-family: "Days";
+    margin-right: 30px;
+  }
+
+  .goods-menu-dropdown-item ul {
+    padding-top: 30px;
+  }
+
+  .goods-menu-dropdown-subitem {
+    font-family: "PragmaticaBook-Reg";
+    font-size: 14px;
+    text-transform: capitalize;
+    margin-bottom: 17px;
+  }
+
+  .goods-menu-dropdown-subitem:last-child {
+    margin-bottom: none;
+  }
+}
+
+//goods menu styles ends

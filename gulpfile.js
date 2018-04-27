@@ -11,7 +11,8 @@ var autoprefixer = require('gulp-autoprefixer');
 gulp.task('server', function(){
     connect.server({
         root: 'build/',
-        livereload: true
+        livereload: true,
+        port: 3000
     });
 });
 

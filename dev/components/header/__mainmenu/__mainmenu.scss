@@ -1,0 +1,24 @@
+//main menu styles starts
+
+.main-menu {
+  display: block;
+  padding: 0;
+  font-size: 0;
+  @include media($width-max) {
+    margin: 0;
+  }
+}
+  .main-menu-item {
+    font-size: 12px;
+    list-style: none;
+    display: inline-block;
+    margin-right: 15px;
+    @include media($width-max){
+      font-size: 14px;
+    }
+  }
+  .main-menu-item:last-child {
+    margin-right: 0;
+  }
+
+//main menu styles ends
