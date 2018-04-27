@@ -1,0 +1,62 @@
+//stock counter sections starts
+
+.stock-counter-box {
+  display: none;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 700px;
+ @include media
+($width-max) {
+  display: flex;
+};
+  .stock-box {
+    font-family: "Days";
+    color: #ec0541;
+    display: inline-block;
+    text-align: center;
+    .amount-discont {
+      padding-top: 34px;
+      font-size: 34px;
+      margin-bottom: 5px;
+    }
+    .discont-good {
+      font-size: 16px;
+    }
+  }
+  .counterdown-wrap{
+    padding-top: 8px;
+    height: 146px;
+    margin-left: 16px;
+  }
+  .counterdown-text-blocks{
+    padding-top: 2px;
+    box-sizing: border-box;
+    height: 26px;
+    text-align: center;
+    width: 236px;
+    display: inline-block;
+    font-family: "Myriad Pro";
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 13px;
+
+  }
+  .stock-ends{
+    background-color: #b81b41;
+    margin-bottom: 14px;
+    padding-left: 27px;
+    text-align: left;
+  }
+  .details{
+    background-color: #4274ba;
+    font-family: 'Days';
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-top: 15px;
+  }
+}
+
+@import "__counterdown/_counterdown";
+
+//stock counter section starts
