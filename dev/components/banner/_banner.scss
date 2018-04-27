@@ -1,0 +1,86 @@
+/* banner styles starts */
+
+.banner {
+  height: 422px;
+  overflow: hidden;
+  max-width: 1570px;
+  position: relative;
+  margin: auto;
+
+  .mySlides {
+    display: none;
+    .mySlides img {
+      width: 100%;
+    }
+  }
+  .prev, .next {
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    padding-left: 11px;
+    padding-top: 3px;
+    top: 45%;
+    width: 45px;
+    height: 45px;
+    border: 1px solid #0778bf;
+    border-radius: 25px;
+    color: #0778bf;
+    font-weight: bold;
+    font-size: 26px;
+    background-color: white;
+  }
+  .next {
+    right: 4px;
+    padding-left: 15px;
+  }
+  .prev {
+    left: 17px;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {
+      opacity: .4
+    }
+    to {
+      opacity: 1
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
+    to {
+      opacity: 1
+    }
+  }
+  .banner-stock-box{
+    position: absolute;
+    top: 17.5%;
+    right: 6%;
+    font-family: 'Days';
+  }
+  .banner-stock-text {
+    font-size: 36px;
+    color: #0075be;
+    margin-bottom: 30px;
+    line-height: 40px;
+  }
+  .banner-stock-btn {
+    font-size: 11px;
+    text-transform:
+            uppercase;
+    color: white;
+    background-color:  #0075be;
+    border-radius: 25px;
+    border: none;
+    width: 171px;
+    height: 55px;
+  }
+}
+/* banner styles ends */
