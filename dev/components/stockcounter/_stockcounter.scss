@@ -6,9 +6,9 @@
   display: none;
   align-items: flex-start;
   justify-content: space-between;
-  padding-left: 700px;
+  padding-left: 48.95104895104895%;
  @include media
-($width-max) {
+($width-mid) {
   display: flex;
 };
   .stock-box {
@@ -28,7 +28,10 @@
   .counterdown-wrap{
     padding-top: 8px;
     height: 146px;
-    margin-left: 16px;
+    @include media
+    ($width-max) {
+      margin-left: 16px;
+    };
   }
   .counterdown-text-blocks{
     padding-top: 2px;

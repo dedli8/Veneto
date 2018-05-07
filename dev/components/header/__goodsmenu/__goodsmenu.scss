@@ -38,11 +38,14 @@
     position: absolute;
     width: 9px;
     height: 9px;
-    top: 30px;
+    top: 24px;
     left: 43%;
     border-left: 1px solid #0075be;
     border-top: 1px solid #0075be;
     transform: rotate(45deg);
+    @include media($width-max) {
+      top:30px;
+    }
   }
   .goods-menu-item:hover .goods-menu-arrowup {
     display: block;
