@@ -16,7 +16,7 @@ const myCountdown2 = new countdown({
     secWord: ' сек'
 });
 const myCountdown3 = new countdown({
-    target: '.countdown3',
+    target: '.countdown2',
     dayWord: ' день',
     hourWord: ' час',
     minWord: ' минут',

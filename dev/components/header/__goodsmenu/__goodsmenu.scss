@@ -11,7 +11,7 @@
     display: inline-block;
     vertical-align: middle;
     margin-right: 31px;
-    &:last-child {
+    &:nth-child(13) {
       margin-right: 0;
     }
     &:hover {
@@ -26,7 +26,6 @@
     position: absolute;
     left: 0;
     top: 50px;
-    width: 370px/673px*100%;
     z-index: 2;
   }
   .goods-menu-item:hover + .goods-menu-dropdown {
@@ -58,7 +57,14 @@
     font-family: "Days";
     margin-right: 30px;
   }
-
+  .dropdown-column{
+    display: inline-block;
+    vertical-align: top;
+  }
+  .dropdown-item-column{
+    display: list-item;
+    margin-bottom: 20px;
+  }
   .goods-menu-dropdown-item ul {
     padding-top: 30px;
   }
