@@ -8,6 +8,29 @@ const myCountdown = new countdown({
     secWord: ' сек'
 });
 
+const myCountdown2 = new countdown({
+    target: '.countdown2',
+    dayWord: ' день',
+    hourWord: ' час',
+    minWord: ' минут',
+    secWord: ' сек'
+});
+const myCountdown3 = new countdown({
+    target: '.countdown3',
+    dayWord: ' день',
+    hourWord: ' час',
+    minWord: ' минут',
+    secWord: ' сек'
+});
+const myCountdown4 = new countdown({
+    target: '.countdown4',
+    dayWord: ' день',
+    hourWord: ' час',
+    minWord: ' минут',
+    secWord: ' сек'
+});
+
+
 var slideIndex = 1;
 showSlides(slideIndex);
 

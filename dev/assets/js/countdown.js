@@ -14,19 +14,6 @@ const countdown = function(_config) {
     tarmin = parseInt(tarTime[1]);
   }
 
-  let months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-  let dateNow = new Date();
-  let dayNow = dateNow.getDate();
-  let monthNow = dateNow.getMonth() + 1;
-  let yearNow = dateNow.getFullYear();
-  let hourNow = dateNow.getHours();
-  let minNow = dateNow.getMinutes();
-  let count_day = 0;
-  let count_hour = 0;
-  let count_min = 0;
-  let count_day_isSet = false;
-  let isOver = false;
-  
   // Set the date we're counting down to
   var countDownDate = new Date(year, month-1, day, tarhour, tarmin, 0, 0).getTime();
 
@@ -58,7 +45,7 @@ const countdown = function(_config) {
       // If the count down is over, write some text 
       if (distance < 0) {
           clearInterval(x);
-          $(".countdown").innerHTML = "EXPIRED";
+          $(".countdown-wrap").innerHTML = "EXPIRED";
       }
   }, 1000);
 

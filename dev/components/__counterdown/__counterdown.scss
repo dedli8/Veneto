@@ -1,11 +1,12 @@
 //counter down styles starts
 
-.countdown {
+.countdown, .countdown2, .countdown3, .countdown4 {
   display: flex;
   font-family: "Myriad Pro";
   font-weight: bold;
   color: #5a4f5d;
-
+}
+ .countdown{
   .day, .hour, .min, .sec, .delimiter {
     margin-right: 6px;
     text-align: center;

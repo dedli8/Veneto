@@ -1,11 +1,12 @@
 /* banner styles starts */
 
 .banner {
-  height: 422px;
+  //height: 614px;
   overflow: hidden;
-  max-width: 1570px;
+  //max-width: 1570px;
   position: relative;
   margin: auto;
+  margin-bottom: 30px;
 
   .mySlides {
     display: none;
@@ -19,7 +20,7 @@
     position: absolute;
     padding-left: 11px;
     padding-top: 3px;
-    top: 45%;
+    top: 46.5%;
     width: 45px;
     height: 45px;
     border: 1px solid #0778bf;
@@ -60,27 +61,66 @@
     }
   }
   .banner-stock-box{
-    position: absolute;
-    top: 17.5%;
-    right: 6%;
+    padding: 26px 0 40px 70px;
     font-family: 'Days';
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   height: 100%;
+    box-sizing: border-box;
   }
   .banner-stock-text {
     font-size: 36px;
     color: #0075be;
-    margin-bottom: 30px;
     line-height: 40px;
   }
   .banner-stock-btn {
-    font-size: 11px;
-    text-transform:
-            uppercase;
+    font-size: 19px;
+    text-transform: uppercase;
     color: white;
     background-color:  #0075be;
-    border-radius: 25px;
+    border-radius: 35px;
     border: none;
-    width: 171px;
-    height: 55px;
+    width: 231px;
+    height: 76px;
+    font-family: 'Days';
+  }
+  .countdown-box{
+    position: absolute;
+    right: 3.885350318471338%;
+    top: 53px;
+    background-color: #ffffff;
+    border-radius: 7px;
+    padding: 3px 25px 2px 0;
+    display: flex;
+  align-items: center;
+  }
+  .countdown-text{
+    font-family: 'Days';
+    color: #5a4f5d;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    margin-right: 14px;
+    padding-left: 10px;
+  }
+  .day, .hour, .min, .sec, .delimiter {
+    margin-right: 6px;
+    text-align: center;
+  }
+
+  .num, .delimiter {
+    display: block;
+    font-size: 29px;
+  }
+
+  .word {
+    position: relative;
+    top: -7px;
+    display: block;
+    font-size: 14px;
   }
 }
 /* banner styles ends */
