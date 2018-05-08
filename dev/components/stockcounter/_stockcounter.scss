@@ -1,16 +1,18 @@
 //stock counter sections starts
 .section-stock-counterdown{
-  margin-bottom: 5px;
-}
-.stock-counter-box {
+  position: absolute;
+  width: 100%;
+  height: 189px;
+  bottom: -190px;
+  background-color: white;
   display: none;
+  z-index: 1;
+.stock-counter-box {
+  display: flex;
   align-items: flex-start;
   justify-content: space-between;
   padding-left: 48.95104895104895%;
- @include media
-($width-mid) {
-  display: flex;
-};
+}
   .stock-box {
     font-family: "Days";
     color: #ec0541;

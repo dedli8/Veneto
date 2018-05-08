@@ -5,8 +5,7 @@
   color: #6d7c90;
   padding-top: 25px;
   padding-bottom: 36px;
-  border-bottom: 1px solid #e3e6e9;
-  margin-bottom: 30px;
+  position: relative;
   @include media($width-sm) {
     padding-bottom: 72px;
     margin-bottom: 60px;
@@ -14,8 +13,8 @@
   }
   @include media($width-mid) {
     padding-bottom: 12px;
-    margin-bottom: 10px;
-    border-color: #0075be;
+    margin-bottom: 0;
+    //border-color: #0075be;
     padding-top: 20px;
   }
   .wrap {

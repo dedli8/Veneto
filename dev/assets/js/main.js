@@ -16,7 +16,7 @@ const myCountdown2 = new countdown({
     secWord: ' сек'
 });
 const myCountdown3 = new countdown({
-    target: '.countdown2',
+    target: '.countdown3',
     dayWord: ' день',
     hourWord: ' час',
     minWord: ' минут',
@@ -57,3 +57,20 @@ function showSlides(n) {
     }
     slides[slideIndex - 1].style.display = "block";
 }
+
+const menuItem = document.getElementsByClassName("goods-menu-item");
+const dropdownMenuArea = document.getElementsByClassName("section-stock-counterdown")[0];
+const header = document.getElementsByClassName("header")[0];
+for (let i = 0; menuItem.length>i; i++) {
+    menuItem[i].addEventListener("mouseover", displayDropdownArea);
+    menuItem[i].addEventListener("mouseout", displayNoneDropdownArea);
+}
+function displayDropdownArea() {
+    dropdownMenuArea.style.display = "block";
+    header.style.borderBottom = "1px solid #0075be";
+}
+function displayNoneDropdownArea() {
+    dropdownMenuArea.style.display = "none";
+    header.style.borderBottom = "none";
+}
+

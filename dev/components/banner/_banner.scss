@@ -1,12 +1,21 @@
 /* banner styles starts */
 
 .banner {
-  //height: 614px;
+  height: 614px;
   overflow: hidden;
   //max-width: 1570px;
   position: relative;
   margin: auto;
   margin-bottom: 30px;
+  .goods-menu-area{
+    position: absolute;
+    top: 0;
+    height: 189px;
+    background-color: white;
+    display: none;
+    z-index: 1;
+    width: 100%;
+  }
 
   .mySlides {
     display: none;
