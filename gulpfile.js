@@ -12,7 +12,7 @@ gulp.task('server', function(){
     connect.server({
         root: 'build/',
         livereload: true,
-        port: 2000
+        port: 4000
     });
 });
 

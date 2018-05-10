@@ -63,22 +63,22 @@ body{
 
 //btnToTop styles starts
 #btn-to-top {
+  text-align: center;
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 17px;
+  right: 68px;
   z-index: 99;
   cursor: pointer;
   box-sizing: border-box;
-  padding-left: 6px;
-  padding-bottom: 3px;
-  width: 45px;
-  height: 45px;
-  border: 3px solid #0778bf;
+  padding-bottom: 1px;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #0778bf;
   border-radius: 25px;
   color: #0778bf;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 17px;
   transform: rotate(90deg);
   background-color: transparent;
   outline: none;

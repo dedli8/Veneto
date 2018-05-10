@@ -7,12 +7,10 @@
     display: inline-block;
   }
   .goods-menu-item {
-    position: relative;
     display: inline-block;
     vertical-align: middle;
     margin-right: 31px;
-    cursor: pointer;
-    &:nth-child(13) {
+    &:last-child {
       margin-right: 0;
     }
     &:hover {
@@ -23,14 +21,19 @@
     }
   }
   .goods-menu-dropdown {
+    width: 900px;
     display: none;
     position: absolute;
     left: 0;
-    top: 50px;
+    top: 15px;
+    padding-top: 35px;
     z-index: 2;
   }
-  .goods-menu-item:hover + .goods-menu-dropdown {
+  .goods-menu-item:hover > .goods-menu-dropdown {
     display: block;
+  }
+  .goods-menu-arrowup-box{
+    position: relative;
   }
   .goods-menu-arrowup {
     display: none;
@@ -38,25 +41,30 @@
     position: absolute;
     width: 9px;
     height: 9px;
-    top: 24px;
+    top: 11px;
     left: 43%;
+    z-index: 3;
     border-left: 1px solid #0075be;
     border-top: 1px solid #0075be;
     transform: rotate(45deg);
     @include media($width-max) {
-      top:30px;
+      top:14px;
     }
   }
   .goods-menu-item:hover .goods-menu-arrowup {
     display: block;
   }
   .goods-menu-dropdown-item {
+    color: #6d7c90;
     display: inline-block;
     vertical-align: top;
     text-transform: uppercase;
     font-size: 11px;
     font-family: "Days";
     margin-right: 30px;
+    &:hover {
+      color: #0075be;
+    }
   }
   .dropdown-column{
     display: inline-block;
@@ -71,14 +79,19 @@
   }
 
   .goods-menu-dropdown-subitem {
+    color: #6d7c90;
     font-family: "PragmaticaBook-Reg";
     font-size: 14px;
     text-transform: capitalize;
     margin-bottom: 17px;
+    &:hover {
+      color: #0075be;
+    }
   }
-
+  .goods-menu-dropdown-subitem:hover {
+    color: #0075be; }
   .goods-menu-dropdown-subitem:last-child {
-    margin-bottom: none;
+    margin-bottom: 0;
   }
 }
 

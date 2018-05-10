@@ -1,16 +1,13 @@
 /* banner styles starts */
 
 .banner {
-  height: 614px;
-  overflow: hidden;
   position: relative;
   margin: auto;
-  margin-bottom: 30px;
   .mySlides {
     display: none;
-    .mySlides img {
-      width: 100%;
-    }
+  img{
+    width: 100%;
+  }
   }
   .prev, .next {
     box-sizing: border-box;
