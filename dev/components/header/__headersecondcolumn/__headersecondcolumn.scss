@@ -44,7 +44,7 @@
   }
   @include media($width-max) {
     align-items: self-start;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
   }
 }
 .header-first-row > * {
@@ -61,16 +61,16 @@
 
 .mobile-logo {
   width: 158px;
-  height: 22px;
+  //height: 22px;
   margin-right: 3px;
   @include media($width-xs) {
     width: 210px;
-    height: 29px;
+    //height: 29px;
     margin-right: 0px;
   }
   @include media($width-sm) {
     width: 419px;
-    height: 57px;
+    //height: 57px;
     margin-right: 0px;
   }
   @include media($width-mid) {
@@ -83,6 +83,7 @@
 }
 .phone-icon {
   background-image: url(img/phoneicon.svg);
+  background-repeat: no-repeat;
   width: 39px;
   height: 35px;
   background-size: 39px 35px;
@@ -250,6 +251,7 @@
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
+  background-repeat: no-repeat;
   @include media($width-xs) {
     background-image: url(img/mobilesearchicon.svg);
     width: 39px;
@@ -376,6 +378,7 @@
 }
 .pin-icon {
   background-image: url(img/pin_icon.svg);
+  background-repeat: no-repeat;
   background-size: 9px 12px;
   width: 9px;
   height: 12px;
@@ -397,6 +400,7 @@
 }
 .cart-icon {
   background-image: url(img/mobilecarticon.svg);
+  background-repeat: no-repeat;
   background-size: 33px 30px;
   width: 33px;
   height: 30px;
