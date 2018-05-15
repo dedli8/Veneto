@@ -34,6 +34,7 @@
 /*header second column first row styles start*/
 
 .header-first-row {
+  position: relative;
   display: none;
   align-items: flex-start;
   justify-content: space-between;
@@ -197,14 +198,71 @@
   }
 }
 .city {
-  font-size: 14px;
-  border-bottom: 1px dashed #0075be;
   margin-right: 13px;
-  @include media($width-mid) {
-    margin-right: 20px;
+  .city-text-box {
+    position: relative;
+    .city-text {
+      cursor: pointer;
+      border-bottom: 1px dashed #0075be;
+      font-size: 12px;
+      @include media($width-max){
+        font-size: 14px;
+      }
+    }
+    .city-panel-arrowup {
+      display: none;
+      background-color: white;
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      top: 20px;
+      left: 42%;
+      z-index: 5;
+      border-left: 1px solid #0075be;
+      border-top: 1px solid #0075be;
+      transform: rotate(45deg);
+    }
   }
-  @include media($width-max) {
-    margin-right: 24px;
+  .city-panel-wrap {
+    padding-top: 28px;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    z-index: 4;
+  }
+
+  .city-panel {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #0777bd;
+    border-radius: 10px;
+    ul {
+      display: inline-block;
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+        position: relative;
+      }
+    }
+    .city-panel-item {
+      padding: 3px 5px;
+      font-family: "PragmaticaBook-Reg";
+      color: #0075be;
+      font-size: 12px;
+      background-color: white;
+      border-radius: 15px;
+      display: inline-block;
+      cursor: pointer;
+      @include media($width-max){
+        font-size: 14px;
+      }
+    }
+    .city-panel-item-active {
+      background-color: #0075be;
+      color: white;
+    }
   }
 }
 .language {

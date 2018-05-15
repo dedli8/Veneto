@@ -172,3 +172,45 @@ btnToTop.addEventListener("click", function () {
 });
 
 // btn to top script ends
+
+// city dropdown script starts
+
+const city = document.getElementsByClassName("city")[0];
+const cityPanelWrap = document.getElementsByClassName('city-panel-wrap')[0];
+const cityArrowup = document.getElementsByClassName("city-panel-arrowup")[0];
+const cityText = document.getElementsByClassName("city-text")[0];
+const cityItemCollection = document.getElementsByClassName('city-panel-item');
+
+function showPanel() {
+    cityPanelWrap.style.display = "block";
+    cityArrowup.style.display = "block";
+};
+function hidePanel() {
+    cityPanelWrap.style.display = 'none';
+    cityArrowup.style.display = 'none';
+}
+function changeCity (event) {
+    if (event.target.classList.contains("city-panel-item")) {
+            for (var i = 0; cityItemCollection.length>i; i++){
+            cityItemCollection[i].classList.remove("city-panel-item-active");
+        }
+        event.target.classList.add("city-panel-item-active");
+        const getText = event.target.innerHTML;
+        cityText.innerHTML = getText;
+        cityPanelWrap.style.display = 'none';
+        cityArrowup.style.display = 'none';
+        event.stopPropagation();
+    }
+    else {
+        cityPanelWrap.addEventListener('mouseleave', hidePanel);
+    }
+};
+
+city.addEventListener('click', showPanel);
+cityPanelWrap.addEventListener('click', changeCity);
+
+
+
+
+// city dropdown script ends
+
