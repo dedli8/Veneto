@@ -201,16 +201,48 @@ function changeCity (event) {
         cityArrowup.style.display = 'none';
         event.stopPropagation();
     }
-    else {
-        cityPanelWrap.addEventListener('mouseleave', hidePanel);
-    }
 };
 
 city.addEventListener('click', showPanel);
 cityPanelWrap.addEventListener('click', changeCity);
-
+city.addEventListener('mouseleave', hidePanel);
 
 
 
 // city dropdown script ends
 
+// language dropdown script starts
+
+const language = document.getElementsByClassName("language")[0];
+const languagePanelWrap = document.getElementsByClassName('language-panel-wrap')[0];
+const languageArrow = document.getElementsByClassName("language-arrow")[0];
+const languagePanelText = document.getElementsByClassName('language-panel-text')[0];
+var languageText = document.getElementsByClassName('language-text')[0];
+var getLanguageText = "";
+
+function showLanguagePanel() {
+    languagePanelWrap.style.display = "block";
+   languageArrow.style.display = "block";
+    getLanguageText = languageText.innerHTML;
+};
+function hideLanguagePanel() {
+    languagePanelWrap.style.display = 'none';
+    languageArrow.style.display = 'none';
+}
+function changeLanguage (event) {
+    if (event.target.classList.contains("language-panel-text")) {
+        var getPanelText = event.target.innerHTML;
+        languagePanelText.innerHTML = getLanguageText;
+        languageText.innerHTML = getPanelText;
+        languagePanelWrap.style.display = 'none';
+        languageArrow.style.display = 'none';
+        event.stopPropagation();
+    }
+};
+
+language.addEventListener('click', showLanguagePanel);
+languagePanelWrap.addEventListener('click', changeLanguage);
+language.addEventListener('mouseleave', hideLanguagePanel);
+
+
+// language dropdown script ends
