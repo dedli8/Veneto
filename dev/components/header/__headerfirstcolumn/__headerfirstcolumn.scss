@@ -1,20 +1,21 @@
 /*header first column styles starts*/
 
 .header-first-column {
-  font-size: 12px;
   display: none;
   flex-direction: column;
-  margin-right: 2.5%;
-  @include media ($width-max) {
-    font-size: 14px;
-  }
+  margin-right: 1%;
   @include media ($width-mid) {
     display: flex;
   }
+  @include media ($width-max) {
+    font-size: 14px;
+  }
+  //@include media ($width-xmax) {
+  //  font-size: 17px;
+  //}
   .sales {
     display: none;
     color: #fa0c3f;
-    margin-bottom: 3px;
     @include media($width-mid) {
       display: block;
     }
@@ -29,19 +30,23 @@
   }
   .icon-star {
     background-image: url(img/star_icon.svg);
+    background-repeat: no-repeat;
     background-size: 13px 11px;
     width: 13px;
     height: 11px;
-    margin-right: 3px;
     @include media($width-max) {
-      background-image: url(img/star_icon.svg);
       background-size: 15px 14px;
       width: 15px;
       height: 14px;
     }
+    //@include media($width-xmax){
+    //  width: 18px;
+    //  height: 17px;
+    //  background-size: 18px 17px;
+    //}
   }
   .stock {
-    margin-right: 13px;
+    margin-right: 17px;
     @include media($width-max) {
       margin-right: 20px;
     }
@@ -64,11 +69,11 @@
   }
 
   .installment span:first-child {
-    margin-right: 3px;
+    margin-right: 1px;
   }
 
   .logo {
-    width: 168px;
+    width: 177px;
     //height: 22px;
     @include media($width-max) {
       width: 198px;

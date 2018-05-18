@@ -3,13 +3,20 @@
 .goods-menu {
   display: none;
   position: relative;
+  top: -2px;
+  font-family: 'Days', sans-serif;
+  font-size: 10.53px;
+  align-self: center;
   @include media($width-mid) {
     display: inline-block;
   }
   .goods-menu-item {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 31px;
+    margin-right: 25px;
+    &:nth-child(5){
+      margin-right: 28px;
+    }
     &:last-child {
       margin-right: 0;
     }
