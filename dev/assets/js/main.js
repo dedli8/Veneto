@@ -121,12 +121,41 @@ const stockCounter = document.getElementsByClassName("section-stock-counterdown"
 const menuItem = document.getElementsByClassName("goods-menu-item");
 const dropdownMenuArea = document.getElementsByClassName("section-stock-counterdown")[0];
 const header = document.getElementsByClassName("header")[0];
-for (let i = 0; menuItem.length > i; i++) {
-    menuItem[i].addEventListener("mouseover", displayDropdownArea);
-    menuItem[i].addEventListener("mouseout", displayNoneDropdownArea);
+const goodsMenu = document.getElementsByClassName("goods-menu")[0];
+const goodsMenuDropdown = document.getElementsByClassName("goods-menu-dropdown");
+
+for (let j = 0; menuItem.length > j; j++) {
+    menuItem[j].addEventListener("mouseover", function (event) {
+        if (event.target.parentElement.classList.contains("goods-menu-item")){
+            displayDropdownArea();
+            for (let t = 0; menuItem.length > t; t++){
+                goodsMenuDropdown[t].classList.remove("goods-menu-dropdown-active");
+            }
+            event.target.parentElement.lastElementChild.classList.add("goods-menu-dropdown-active");
+        }
+    });
 }
-stockCounter.addEventListener("mouseover", stockCounterBlock);
-stockCounter.addEventListener("mouseout", stockCounterNone);
+// stockCounter.addEventListener("mouseenter", displayDropdownArea);
+goodsMenu.addEventListener("mouseleave", displayNoneDropdownArea);
+// stockCounter.addEventListener("mouseleave", displayNoneDropdownArea);
+
+// goodsMenu.addEventListener('mouseover', function (event) {
+//     if (event.target.parentElement.classList.contains("goods-menu-item")){
+//         displayDropdownArea();
+//         for (let i = 0; menuItem.length > i; i++){
+//             menuItem[0].classList.remove("goods-menu-dropdown-active");
+//         }
+//         event.target.parentElement.lastElementChild.classList.add("goods-menu-dropdown-active");
+//     }
+// })
+
+
+// for (let i = 0; menuItem.length > i; i++) {
+//     menuItem[i].addEventListener("mouseover", displayDropdownArea);
+//     menuItem[i].addEventListener("mouseout", displayNoneDropdownArea);
+// }
+// stockCounter.addEventListener("mouseover", stockCounterBlock);
+// stockCounter.addEventListener("mouseout", stockCounterNone);
 
 function displayDropdownArea(event) {
     dropdownMenuArea.style.display = "block";
@@ -136,6 +165,10 @@ function displayDropdownArea(event) {
 function displayNoneDropdownArea(event) {
     dropdownMenuArea.style.display = "none";
     header.style.borderBottom = "none";
+    for (let h = 0; menuItem.length > h; h++){
+        goodsMenuDropdown[h].classList.remove("goods-menu-dropdown-active");
+    }
+
 }
 
 function stockCounterBlock() {

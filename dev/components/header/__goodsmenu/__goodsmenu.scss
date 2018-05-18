@@ -13,9 +13,6 @@
     &:last-child {
       margin-right: 0;
     }
-    &:hover {
-      color: #0075be;
-    }
     @include media($width-max) {
       margin-right: 33px;
     }
@@ -30,9 +27,13 @@
     padding-top: 35px;
     z-index: 2;
   }
-  .goods-menu-item:hover > .goods-menu-dropdown {
+  .goods-menu-dropdown-active {
+    color: #0075be;
     display: block;
   }
+  //.goods-menu-item:hover > .goods-menu-dropdown {
+  //  display: block;
+  //}
   .goods-menu-arrowup-box{
     position: relative;
   }
