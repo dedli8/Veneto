@@ -19,8 +19,8 @@
     @include media($width-mid) {
       display: block;
     }
-    @include media($width-max) {
-      margin-bottom: 4px;
+    @include media($width-max){
+      margin-bottom: -1px;
     }
   }
 
@@ -76,8 +76,8 @@
     width: 177px;
     //height: 22px;
     @include media($width-max) {
-      width: 198px;
-      //height: 26px;
+      width: 218px;
+      height: 47px;
     }
   }
 }

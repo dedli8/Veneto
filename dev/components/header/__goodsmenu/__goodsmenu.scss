@@ -2,65 +2,74 @@
 
 .goods-menu {
   display: none;
-  position: relative;
-  top: -2px;
+  //position: relative;
+  //top: -2px;
   font-family: 'Days', sans-serif;
   font-size: 10.53px;
   align-self: center;
   @include media($width-mid) {
     display: inline-block;
   }
+  @include media($width-max){
+    font-size: 13px;
+  }
   .goods-menu-item {
+    cursor: pointer;
     display: inline-block;
     vertical-align: middle;
     margin-right: 25px;
+    &:hover{
+      color: #0075be;
+    }
     &:nth-child(5){
       margin-right: 28px;
+      @include media($width-max) {
+        margin-right: 36px;
+      }
     }
     &:last-child {
       margin-right: 0;
     }
     @include media($width-max) {
-      margin-right: 33px;
+      margin-right: 30px;
     }
   }
   .goods-menu-dropdown {
-    width: 900px;
+    width: 100%;
     height: 170px;
     display: none;
     position: absolute;
     left: 0;
-    top: 15px;
-    padding-top: 35px;
+    top: 27px;
+    padding-top: 23px;
     z-index: 2;
-  }
-  .goods-menu-dropdown-active {
-    color: #0075be;
-    display: block;
   }
   //.goods-menu-item:hover > .goods-menu-dropdown {
   //  display: block;
   //}
   .goods-menu-arrowup-box{
+    display: none;
     position: relative;
   }
   .goods-menu-arrowup {
-    display: none;
     background-color: white;
     position: absolute;
     width: 9px;
     height: 9px;
     top: 11px;
     left: 43%;
-    z-index: 3;
+    z-index: 0;
     border-left: 1px solid #0075be;
     border-top: 1px solid #0075be;
     transform: rotate(45deg);
     @include media($width-max) {
-      top:14px;
+      top:29px;
     }
   }
-  .goods-menu-item:hover .goods-menu-arrowup {
+  //.goods-menu-item:hover .goods-menu-arrowup-box {
+  //  display: block;
+  //}
+  .goods-menu-dropdown-active {
     display: block;
   }
   .goods-menu-dropdown-item {

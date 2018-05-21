@@ -123,6 +123,7 @@ const dropdownMenuArea = document.getElementsByClassName("section-stock-counterd
 const header = document.getElementsByClassName("header")[0];
 const goodsMenu = document.getElementsByClassName("goods-menu")[0];
 const goodsMenuDropdown = document.getElementsByClassName("goods-menu-dropdown");
+const goodsMenuArrow = document.getElementsByClassName("goods-menu-arrowup-box");
 
 for (let j = 0; menuItem.length > j; j++) {
     menuItem[j].addEventListener("mouseover", function (event) {
@@ -130,8 +131,10 @@ for (let j = 0; menuItem.length > j; j++) {
             displayDropdownArea();
             for (let t = 0; menuItem.length > t; t++){
                 goodsMenuDropdown[t].classList.remove("goods-menu-dropdown-active");
+                goodsMenuArrow[t].classList.remove("goods-menu-dropdown-active");
             }
             event.target.parentElement.lastElementChild.classList.add("goods-menu-dropdown-active");
+            event.target.parentElement.firstElementChild.classList.add("goods-menu-dropdown-active");
         }
     });
 }
@@ -162,11 +165,12 @@ function displayDropdownArea(event) {
     header.style.borderBottom = "1px solid #0075be";
 }
 
-function displayNoneDropdownArea(event) {
+function displayNoneDropdownArea() {
     dropdownMenuArea.style.display = "none";
     header.style.borderBottom = "none";
     for (let h = 0; menuItem.length > h; h++){
         goodsMenuDropdown[h].classList.remove("goods-menu-dropdown-active");
+        goodsMenuArrow[h].classList.remove("goods-menu-dropdown-active");
     }
 
 }

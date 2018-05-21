@@ -13,10 +13,13 @@
     padding-top: 50px;
   }
   @include media($width-mid) {
-    padding-bottom: 12px;
+    padding-bottom: 6px;
     margin-bottom: 0;
     //border-color: #0075be;
     padding-top: 20px;
+  }
+  @include media($width-max) {
+   font-size: 14px;
   }
   .wrap {
     display: block;

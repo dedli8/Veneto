@@ -2,7 +2,6 @@
 
 .header-second-column {
   display: flex;
-  align-items: top;
   justify-content: space-between;
   @include media($width-mid) {
     flex-direction: column;
@@ -33,7 +32,8 @@
 /*header second column first row styles start*/
 
 .header-first-row {
-  position: relative;
+  //position: relative;
+  //top: -2px;
   display: none;
   align-items: center;
   justify-content: space-between;
@@ -43,8 +43,7 @@
     margin-bottom: 8px;
   }
   @include media($width-max) {
-    align-items: self-end;
-    margin-bottom: 16px;
+    margin-bottom: 11px;
   }
 }
 .header-first-row > * {
@@ -67,7 +66,7 @@
     margin-right: 0px;
   }
   @include media($width-sm) {
-    //width: 419px;
+    width: 350px;
     //height: 57px;
     margin-right: 0px;
   }
@@ -77,8 +76,9 @@
 }
 .phones {
   font-size: 12.14px;
-  position: relative;
-  top: -2px;
+  @include media($width-max){
+    font-size: 15px;
+  }
 }
 .phone-icon {
   background-image: url(img/phoneicon.svg);
@@ -116,7 +116,7 @@
 }
 .phone-wrap {
   @include media($width-max) {
-    margin-right: 17px;
+    margin-right: 13px;
   }
 }
 .phone-wrap > * {
@@ -147,8 +147,9 @@
   height: 19px;
   @include media($width-max) {
      background-image: url(img/kievstar.svg);
-     background-size: 24px 22px;
-     width: 24px;
+    background-repeat: no-repeat;
+     background-size: 25px 22px;
+     width: 25px;
      height: 22px;
    }
   //@include media($width-xmax) {
@@ -160,12 +161,13 @@
 }
 .lifecell-icon {
   background-image: url(img/lifecell.svg);
+  background-repeat: no-repeat;
   background-size: 17px 18px;
   width: 17px;
   height: 18px;
   @include media($width-max) {
-      background-size: 21px 23px;
-      width: 21px;
+      background-size: 22px 23px;
+      width: 22px;
       height: 23px;
     }
   //@include media($width-xmax) {
@@ -176,14 +178,15 @@
 }
 .vodafone-icon {
   background-image: url(img/vodafone.svg);
+  background-repeat: no-repeat;
   background-size: 17px 17px;
   width: 17px;
   height: 17px;
   @include media($width-max) {
     background-image: url(img/vodafone.svg);
-    background-size: 20px 20px;
-    width: 20px;
-    height: 20px;
+    background-size: 22px 22px;
+    width: 22px;
+    height: 22px;
   }
   //@include media($width-xmax) {
   //  background-image: url(img/vodafone.svg);
@@ -203,7 +206,9 @@
   margin-left: 19px;
   display: block;
   @include media($width-max) {
-    margin-left: 12%;
+    margin-left: 5%;
+    margin-right: 6px;
+    align-self: end;
   }
 }
 .avatar-icon {
@@ -216,7 +221,7 @@
     background-size: 18px 20px;
     width: 18px;
     height: 20px;
-    margin-right: 11px;
+    margin-right: 6px;
   }
   //@include media($width-xmax) {
   //  background-size: 20px 24px;
@@ -226,6 +231,9 @@
 }
 .city {
   margin-right: 19px;
+  @include media($width-max){
+    margin-right: 22px;
+  }
   .city-text-box {
     text-align: right;
     width: 110px;
@@ -233,10 +241,11 @@
     .city-text {
       display: inline-block;
       cursor: pointer;
-      border-bottom: 1px dashed #0075be;
+      border-bottom: 1px dotted #0075be;
+      line-height: 10px;
       //font-size: 12px;
       @include media($width-max){
-        //font-size: 14px;
+        line-height: 12px;
       }
     }
     .city-panel-arrowup {
@@ -245,7 +254,7 @@
       position: absolute;
       width: 9px;
       height: 9px;
-      top: 17px;
+      top: 13px;
       right: 0;
       z-index: 5;
       border-left: 1px solid #0075be;
@@ -253,6 +262,7 @@
       transform: rotate(45deg);
       @include media($width-max){
         top: 20px;
+        right: 8px;
       }
     }
   }
@@ -265,19 +275,22 @@
     background-color: transparent;
     z-index: 4;
     @include media($width-max){
-      padding-top: 12px;
+      padding-top: 15px;
     }
   }
 
   .city-panel {
     //width: 390px;
     background-color: white;
-    padding: 10px;
+    padding: 4px 11px 9px 0px;
     border: 1px solid #0777bd;
     border-radius: 10px;
+    @include media($width-max){
+      padding: 8px 11px 0 0;
+    }
     ul {
       display: inline-block;
-      margin-right: 30px;
+      margin-right: 18px;
       @include media($width-max){
         margin-right: 15px;
       }
@@ -292,14 +305,14 @@
     //  width: 127px;
     //}
     .city-panel-item {
-      padding: 3px 9px;
+      padding: 2px 6px;
       color: #0075be;
       background-color: white;
       border-radius: 15px;
       display: inline-block;
       cursor: pointer;
       @include media($width-max){
-        padding: 1px 8px;
+        padding: 2px 11px;
       }
     }
     .city-panel-item-active {
@@ -316,7 +329,6 @@
   }
   @include media($width-max) {
     font-size: 13px;
-    padding-right: 1px;
   }
   //@include media($width-xmax) {
   // font-size: 16px;
@@ -325,41 +337,64 @@
     border: 1px solid #0777bd;
     border-radius: 6px;
     background-color: white;
-    padding: 6px;
+    padding: 2px;
     z-index: 5;
+    @include media($width-max){
+      padding: 3px;
+    }
   }
   .language-panel-wrap{
     display: none;
     position: absolute;
-    padding-top: 5px;
-    left: -12px;
+    padding-top: 4px;
+    left: -7px;
     top: 12px;
     z-index: 4;
+    @include media($width-max){
+      padding-top: 6px;
+    }
   }
+
   .language-arrow{
     display: none;
       background-color: white;
       position: absolute;
-      width: 7px;
-      height: 7px;
-      top: 13px;
-    left: 6px;
+     top: 10px;
+    left: 1px;
       z-index: 5;
-      border-left: 1px solid #0075be;
-      border-top: 1px solid #0075be;
-      transform: rotate(45deg);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 7px 7px 7px;
+    border-color: transparent transparent #0075be transparent;
+    @include media($width-max){
+      top: 11px;
+      left: 3px;
+    }
+    &:after{
+      content: '';
+      z-index: 6;
+      position: absolute;
+      left: -7px;
+      top: 2px;
+      border-style: solid;
+      border-width: 0 7px 7px 7px;
+      border-color: transparent transparent white transparent;
+    }
   }
   .language-text{
-    font-size: 11px;
 cursor: pointer  }
   .language-panel-text{
     cursor: pointer;
     border-radius: 5px;
-    padding: 5px 7px;
+    padding: 4px;
     color: white;
     background-color: #0777bd;
     font-size: 11px;
     font-family: 'PragmaticaBook-Reg';
+    @include media($width-max){
+      padding: 5px;
+    }
   }
 }
 
@@ -383,7 +418,8 @@ cursor: pointer  }
     margin-left: 0;
   }
   @include media($width-max) {
-    font-size: 13px;
+    position: relative;
+    top: -4px;
   }
 }
 
@@ -421,7 +457,7 @@ cursor: pointer  }
     width: 10%;
   }
   @include media($width-max) {
-    height: 30px;
+    height: 35px;
     width: 10%;
   }
 }
@@ -438,8 +474,8 @@ cursor: pointer  }
   transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
   cursor: pointer;
   @include media($width-max) {
-    height: 30px;
-    padding-right: 30px;
+    height: 35px;
+    padding-right: 35px;
   }
   &:focus {
     padding-left: 50%;
@@ -473,31 +509,34 @@ cursor: pointer  }
   height: 28px;
   box-sizing: border-box;
   border: 2px solid #ebebeb;
-  border-radius: 15px;
+  border-radius: 20px;
   background-image: url(img/search_icon.svg);
   background-size: 12px 12px;
   background-repeat: no-repeat;
   background-position: center;
   @include media($width-max) {
-    background-size: 13px 13px;
-    width: 30px;
-    height: 30px;
+    background-size: 15px 15px;
+    width: 35px;
+    height: 35px;
   }
   //&:hover {
   //  opacity: 1;
   //}
 }
+.marker-cart-box{
+  position: relative;
+  top: 2px;
+}
 .our-markets-box {
-  //display: none;
-  display: inline-block;
+  display: none;
   color: #0075be;
   margin-right: 10px;
-  //@include media($width-mid) {
-  //  display: inline-block;
-  //}
-  //@include media($width-max) {
-  //  display: none;
-  //}
+  @include media($width-mid) {
+    display: inline-block;
+  }
+  @include media($width-max) {
+    margin-right: 8px;
+  }
 }
 //.marker-cart-box .our-markets-box {
 //  @include media($width-mid) {
@@ -511,6 +550,9 @@ cursor: pointer  }
 .our-markets-box > * {
   display: inline-block;
   vertical-align: middle;
+  @include media($width-max){
+    vertical-align: sub;
+  }
 }
 //.marker-cart-box .our-markets-box > * {
 //  @include media($width-max) {
@@ -526,9 +568,9 @@ cursor: pointer  }
   margin-right: 3px;
   @include media($width-max) {
     background-image: url(img/pin_icon.svg);
-    background-size: 13px 17px;
-    width: 13px;
-    height: 17px;
+    background-size: 12px 15px;
+    width: 12px;
+    height: 15px;
     margin-right: 7px;
   }
 }
@@ -566,6 +608,7 @@ cursor: pointer  }
     background-size: 22px 20px;
     width: 22px;
     height: 20px;
+    margin-right: 0;
   }
 }
 .court-counter {
@@ -612,8 +655,8 @@ cursor: pointer  }
     padding-top: 3px;
   }
   @include media($width-max) {
-    width: 30px;
-    height: 30px;
+    width: 29px;
+    height: 29px;
     font-size: 10px;
     padding-top: 9px;
   }
