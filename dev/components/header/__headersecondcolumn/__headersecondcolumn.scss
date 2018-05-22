@@ -1,374 +1,328 @@
 /*header second column styles starts*/
 
 .header-second-column {
-  display: flex;
-  justify-content: space-between;
   @include media($width-mid) {
+    display: flex;
+    justify-content: space-between;
     flex-direction: column;
     width: 100%;
-  }
-}
-.menu-icon {
-  background-image: url(img/menuicon.svg);
-  background-size: 33px 25px;
-  width: 33px;
-  height: 25px;
-  @include media($width-xs) {
-    background-image: url(img/menuicon.svg);
-    background-size: 44px 33px;
-    width: 44px;
-    height: 33px;
-  }
-  @include media($width-sm) {
-    background-size: 87px 66px;
-    width: 87px;
-    height: 66px;
-  }
-  @include media($width-mid) {
-    display: none;
   }
 }
 
 /*header second column first row styles start*/
 
 .header-first-row {
-  position: relative;
-  //top: -2px;
-  display: none;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
   @include media($width-mid) {
     display: flex;
     margin-bottom: 8px;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
   @include media($width-max) {
     margin-bottom: 11px;
   }
 }
+
 .header-first-row > * {
-  display: inline-block;
-  vertical-align: middle;
-  //@include media($width-xmax) {
-  //  font-size: 17px;
-  //}
+  @include media($width-mid) {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
-.mobile-logo {
-  width: 158px;
-  //height: 22px;
-  margin-right: 3px;
-  @include media($width-xs) {
-    width: 210px;
-    //height: 29px;
-    margin-right: 0px;
-  }
-  @include media($width-sm) {
-    width: 350px;
-    //height: 57px;
-    margin-right: 0px;
-  }
-  @include media($width-mid) {
-    display: none;
-  }
-}
 .phones {
-  font-size: 12.14px;
-  @include media($width-max){
+  @include media($width-mid) {
+    font-size: 12.14px;
+  }
+  @include media($width-max) {
     font-size: 15px;
   }
 }
-.phone-icon {
-  background-image: url(img/phoneicon.svg);
-  background-repeat: no-repeat;
-  width: 39px;
-  height: 35px;
-  background-size: 39px 35px;
-  background-position: center;
-  background-repeat: no-repeat;
-  @include media($width-xs) {
-    width: 52px;
-    height: 46px;
-    background-size: 52px 46px;
-    margin-right: 10px;
-    margin-left: 10px;
-  }
-  @include media($width-sm) {
-    width: 106px;
-    height: 91px;
-    background-size: 79px 79px;
-    margin-right: 20px;
-    margin-left: 20px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    border-left: 1px solid #7fbade;
-    border-right: 1px solid #7fbade;
-  }
-  @include media($width-mid) {
-    display: none;
-  }
-}
+
 .phones > * {
-  display: inline-block;
-  margin-right: 11px;
+  @include media($width-mid) {
+    display: inline-block;
+    margin-right: 11px;
+  }
 }
+
 .phone-wrap {
   @include media($width-max) {
     margin-right: 13px;
   }
 }
+
 .phone-wrap > * {
-  display: inline-block;
-  vertical-align: middle;
-  //font-size: 0;
+  @include media($width-mid) {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
+
 .phone-wrap:last-child {
-  margin-right: 0;
+  @include media($width-mid) {
+    margin-right: 0;
+  }
 }
+
 .phone-wrap span:nth-child(2) {
-  //padding-bottom: 7px;
-  //font-size: 12px;
   @include media($width-max) {
     font-size: 15px;
   }
-  //@include media($width-xmax) {
-  //  font-size: 18px;
-  //}
 }
+
 .phone-wrap span:first-child {
   margin-right: 8px;
 }
+
 .kievstar-icon {
-  background-image: url(img/kievstar.svg);
-  background-size: 20px 19px;
-  width: 20px;
-  height: 19px;
+  @include media($width-mid) {
+    background-image: url(img/kievstar.svg);
+    background-size: 20px 19px;
+    width: 20px;
+    height: 19px;
+  }
   @include media($width-max) {
-     background-image: url(img/kievstar.svg);
+    background-image: url(img/kievstar.svg);
     background-repeat: no-repeat;
-     background-size: 25px 22px;
-     width: 25px;
-     height: 22px;
-   }
-  //@include media($width-xmax) {
-  //  background-image: url(img/kievstar.svg);
-  //  background-size: 30px 27px;
-  //  width: 30px;
-  //  height: 27px;
-  //}
+    background-size: 25px 22px;
+    width: 25px;
+    height: 22px;
+  }
 }
+
 .lifecell-icon {
-  background-image: url(img/lifecell.svg);
-  background-repeat: no-repeat;
-  background-size: 17px 18px;
-  width: 17px;
-  height: 18px;
+  @include media($width-mid) {
+    background-image: url(img/lifecell.svg);
+    background-repeat: no-repeat;
+    background-size: 17px 18px;
+    width: 17px;
+    height: 18px;
+  }
   @include media($width-max) {
-      background-size: 22px 23px;
-      width: 22px;
-      height: 23px;
-    }
-  //@include media($width-xmax) {
-  //  background-size: 26px 28px;
-  //  width: 26px;
-  //  height: 28px;
-  //}
+    background-size: 22px 23px;
+    width: 22px;
+    height: 23px;
+  }
 }
+
 .vodafone-icon {
-  background-image: url(img/vodafone.svg);
-  background-repeat: no-repeat;
-  background-size: 17px 17px;
-  width: 17px;
-  height: 17px;
+  @include media($width-mid) {
+    background-image: url(img/vodafone.svg);
+    background-repeat: no-repeat;
+    background-size: 17px 17px;
+    width: 17px;
+    height: 17px;
+  }
   @include media($width-max) {
     background-image: url(img/vodafone.svg);
     background-size: 22px 22px;
     width: 22px;
     height: 22px;
   }
-  //@include media($width-xmax) {
-  //  background-image: url(img/vodafone.svg);
-  //  background-size: 24px 24px;
-  //  width: 24px;
-  //  height: 24px;
-  //}
 }
+
 .authorisation > * {
-  font-family: "PragmaticaBook-Reg";
-  display: inline-block;
-  vertical-align: bottom;
-  color: #0075be;
+  @include media($width-mid) {
+    font-family: "PragmaticaBook-Reg";
+    display: inline-block;
+    vertical-align: bottom;
+    color: #0075be;
+  }
 }
+
 .authorisation {
-  margin-right: 7px;
-  margin-left: 19px;
-  display: block;
+  @include media($width-mid) {
+    margin-right: 7px;
+    margin-left: 19px;
+    display: block;
+  }
   @include media($width-max) {
     margin-left: 5%;
     margin-right: 6px;
     align-self: end;
   }
 }
+
 .avatar-icon {
-  background-image: url(img/avatar.svg);
-  background-size: 15px 17px;
-  width: 15px;
-  height: 17px;
-  margin-right: 3px;
+  @include media($width-mid) {
+    background-image: url(img/avatar.svg);
+    background-size: 15px 17px;
+    width: 15px;
+    height: 17px;
+    margin-right: 3px;
+  }
   @include media($width-max) {
     background-size: 18px 20px;
     width: 18px;
     height: 20px;
     margin-right: 6px;
   }
-  //@include media($width-xmax) {
-  //  background-size: 20px 24px;
-  //  width: 20px;
-  //  height: 24px;
-  //}
 }
+
 .city {
-  margin-right: 19px;
-  @include media($width-max){
+  @include media($width-mid) {
+    margin-right: 19px;
+  }
+  @include media($width-max) {
     margin-right: 22px;
   }
   .city-text-box {
-    text-align: right;
-    width: 110px;
-    position: relative;
+    @include media($width-mid) {
+      text-align: right;
+      width: 110px;
+      position: relative;
+    }
     .city-text {
-      display: inline-block;
-      cursor: pointer;
-      border-bottom: 1px dotted #0075be;
-      line-height: 10px;
-      @include media($width-max){
+      @include media($width-mid) {
+        display: inline-block;
+        cursor: pointer;
+        border-bottom: 1px dotted #0075be;
+        line-height: 10px;
+      }
+      @include media($width-max) {
         line-height: 12px;
       }
     }
     .city-panel-arrowup {
-      display: none;
-      background-color: white;
-      position: absolute;
-      width: 9px;
-      height: 9px;
-      top: 13px;
-      right: 0;
-      z-index: 5;
-      border-left: 1px solid #0075be;
-      border-top: 1px solid #0075be;
-      transform: rotate(45deg);
-      @include media($width-max){
+      @include media($width-mid) {
+        display: none;
+        background-color: white;
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        top: 13px;
+        right: 0;
+        z-index: 5;
+        border-left: 1px solid #0075be;
+        border-top: 1px solid #0075be;
+        transform: rotate(45deg);
+      }
+      @include media($width-max) {
         top: 20px;
         right: 8px;
       }
     }
   }
   .city-panel-wrap {
-    padding-top: 10px;
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 13px;
-    background-color: transparent;
-    z-index: 4;
-    @include media($width-max){
+    @include media($width-mid) {
+      padding-top: 10px;
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 13px;
+      background-color: transparent;
+      z-index: 4;
+    }
+    @include media($width-max) {
       padding-top: 15px;
     }
   }
 
   .city-panel {
-    //width: 390px;
-    background-color: white;
-    padding: 6px 11px 9px 0px;
-    border: 1px solid #0777bd;
-    border-radius: 10px;
-    @include media($width-max){
+    @include media($width-mid) {
+      background-color: white;
+      padding: 6px 11px 9px 0px;
+      border: 1px solid #0777bd;
+      border-radius: 10px;
+    }
+    @include media($width-max) {
       padding: 8px 11px 0 0;
     }
     ul {
-      display: inline-block;
-      margin-right: 18px;
-      @include media($width-max){
+      @include media($width-mid) {
+        display: inline-block;
+        margin-right: 18px;
+      }
+      @include media($width-max) {
         margin-right: 15px;
       }
       &:last-child {
-        margin-right: 0;
-        position: relative;
+        @include media($width-mid) {
+          margin-right: 0;
+          position: relative;
+        }
       }
     }
-    //.city-panel-item-box{
-    //  text-align: center;
-    //  display: inline-block;
-    //  width: 127px;
-    //}
     .city-panel-item {
-      padding: 1px 6px;
-      color: #0075be;
-      background-color: white;
-      border-radius: 15px;
-      display: inline-block;
-      cursor: pointer;
-      @include media($width-max){
+      @include media($width-mid) {
+        padding: 1px 6px;
+        color: #0075be;
+        background-color: white;
+        border-radius: 15px;
+        display: inline-block;
+        cursor: pointer;
+      }
+      @include media($width-max) {
         padding: 2px 11px;
       }
     }
     .city-panel-item-active {
-      background-color: #0075be;
-      color: white;
+      @include media($width-mid) {
+        background-color: #0075be;
+        color: white;
+      }
     }
   }
 }
+
 .language {
-  position: relative;
-  font-size: 10.53px;
   @include media($width-mid) {
-    //padding-right: 8px;
+    position: relative;
+    font-size: 10.53px;
   }
   @include media($width-max) {
     font-size: 13px;
   }
-  //@include media($width-xmax) {
-  // font-size: 16px;
-  //}
   .language-panel{
+  @include media($width-mid) {
     border: 1px solid #0777bd;
     border-radius: 6px;
     background-color: white;
     padding: 2px;
     z-index: 5;
-    @include media($width-max){
-      padding: 3px;
-    }
   }
-  .language-panel-wrap{
+  @include media($width-max) {
+    padding: 3px;
+  }
+}
+
+.language-panel-wrap {
+  @include media($width-mid) {
     display: none;
     position: absolute;
     padding-top: 4px;
     left: -7px;
     top: 12px;
     z-index: 4;
-    @include media($width-max){
-      padding-top: 6px;
-    }
   }
+  @include media($width-max) {
+    padding-top: 6px;
+  }
+}
 
-  .language-arrow{
+.language-arrow {
+  @include media($width-mid) {
     display: none;
-      background-color: white;
-      position: absolute;
-     top: 10px;
+    background-color: white;
+    position: absolute;
+    top: 10px;
     left: 1px;
-      z-index: 5;
+    z-index: 5;
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 0 7px 7px 7px;
     border-color: transparent transparent #0075be transparent;
-    @include media($width-max){
-      top: 11px;
-      left: 3px;
-    }
-    &:after{
+  }
+  @include media($width-max) {
+    top: 11px;
+    left: 3px;
+  }
+  &:after {
+    @include media($width-mid) {
       content: '';
       z-index: 6;
       position: absolute;
@@ -379,9 +333,16 @@
       border-color: transparent transparent white transparent;
     }
   }
-  .language-text{
-cursor: pointer  }
-  .language-panel-text{
+}
+
+.language-text {
+  @include media($width-mid) {
+    cursor: pointer
+  }
+}
+
+.language-panel-text {
+  @include media($width-mid) {
     cursor: pointer;
     border-radius: 5px;
     padding: 4px;
@@ -389,10 +350,12 @@ cursor: pointer  }
     background-color: #0777bd;
     font-size: 11px;
     font-family: 'PragmaticaBook-Reg';
-    @include media($width-max){
-      padding: 5px;
-    }
   }
+  @include media($width-max) {
+    padding: 5px;
+  }
+}
+
 }
 
 /*header second column first row styles ends*/
@@ -400,16 +363,10 @@ cursor: pointer  }
 /*header second column second row styles starts*/
 
 .header-second-row {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-right: 13px;
-  @include media($width-sm) {
-    padding-right: 50px;
-    margin-left: 10px;
-  }
   @include media($width-mid) {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
     justify-content: space-between;
     width: 100%;
     padding-right: 0;
@@ -420,147 +377,112 @@ cursor: pointer  }
   }
 }
 
-.search-mobile-icon {
-  background-image: url(img/mobilesearchicon.svg);
-  width: 30px;
-  height: 30px;
-  background-size: 30px 30px;
-  background-repeat: no-repeat;
-  @include media($width-xs) {
-    background-image: url(img/mobilesearchicon.svg);
-    width: 39px;
-    height: 39px;
-    background-size: 39px 39px;
-  }
-  @include media($width-sm) {
-    background-image: url(img/mobilesearchicon.svg);
-    width: 77px;
-    height: 77px;
-    background-size: 77px 77px;
-  }
-  @include media($width-mid) {
-    display: none;
-  }
-}
 .search-box {
-  height: 28px;
-  display: none;
-  width: 10%;
-  position: relative;
   @include media($width-mid) {
     display: inline-block;
+    height: 28px;
+    position: relative;
     width: 10%;
   }
   @include media($width-max) {
     height: 35px;
-    width: 10%;
   }
-}
-.search-area {
-  height: 28px;
-  padding-right: 28px;
-  width: 0px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: none;
-  z-index: 3;
-  margin-right: 0;
-  transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
-  cursor: pointer;
-  @include media($width-max) {
-    height: 35px;
-    padding-right: 35px;
-  }
-  &:focus {
-    padding-left: 50%;
-    background: white;
-    width: 250%;
-    z-index: 1;
-    cursor: text;
-    padding-top: 2px;
-    border: 2px solid #ebebeb;
-    border-right: none;
-    border-radius: 15px;
-    box-sizing: border-box;
-    //@include media($width-midmax) {
-    //  width: 100%
-    //}
+  .search-area {
+    @include media($width-mid) {
+      height: 28px;
+      padding-right: 28px;
+      width: 0px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: none;
+      z-index: 3;
+      margin-right: 0;
+      transition: width 0.4s cubic-bezier(0, 0.795, 0, 1);
+      cursor: pointer;
+    }
     @include media($width-max) {
-      width: 250%;
+      height: 35px;
+      padding-right: 35px;
+    }
+    &:focus {
+      @include media($width-mid) {
+        padding-left: 50%;
+        background: white;
+        width: 250%;
+        z-index: 1;
+        cursor: text;
+        padding-top: 2px;
+        border: 2px solid #ebebeb;
+        border-right: none;
+        border-radius: 15px;
+        box-sizing: border-box;
+      }
+      @include media($width-max) {
+        width: 250%;
+      }
+    }
+  }
+
+  .search-icon {
+    @include media($width-mid) {
+      text-indent: -10000px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      cursor: pointer;
+      width: 28px;
+      height: 28px;
+      box-sizing: border-box;
+      border: 2px solid #ebebeb;
+      border-radius: 20px;
+      background-image: url(img/search_icon.svg);
+      background-size: 12px 12px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    @include media($width-max) {
+      background-size: 15px 15px;
+      width: 35px;
+      height: 35px;
     }
   }
 }
-.search-icon {
-  text-indent: -10000px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 2;
-  cursor: pointer;
-  //opacity: 0.6;
-  //transition: opacity .4s ease;
-  width: 28px;
-  height: 28px;
-  box-sizing: border-box;
-  border: 2px solid #ebebeb;
-  border-radius: 20px;
-  background-image: url(img/search_icon.svg);
-  background-size: 12px 12px;
-  background-repeat: no-repeat;
-  background-position: center;
-  @include media($width-max) {
-    background-size: 15px 15px;
-    width: 35px;
-    height: 35px;
+.marker-cart-box {
+  @include media($width-mid) {
+    position: relative;
+    top: 2px;
   }
-  //&:hover {
-  //  opacity: 1;
-  //}
-}
-.marker-cart-box{
-  position: relative;
-  top: 2px;
 }
 .our-markets-box {
-  display: none;
-  color: #0075be;
-  margin-right: 10px;
   @include media($width-mid) {
     display: inline-block;
+    color: #0075be;
+    margin-right: 10px;
   }
   @include media($width-max) {
     margin-right: 8px;
   }
 }
-//.marker-cart-box .our-markets-box {
-//  @include media($width-mid) {
-//    display: none;
-//  }
-//  @include media($width-max) {
-//    display: inline-block;
-//    margin-right: 12px;
-//  }
-//}
 .our-markets-box > * {
-  display: inline-block;
-  vertical-align: middle;
-  @include media($width-max){
+  @include media($width-mid) {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  @include media($width-max) {
     vertical-align: sub;
   }
 }
-//.marker-cart-box .our-markets-box > * {
-//  @include media($width-max) {
-//    font-size: 14px;
-//  }
-//}
 .pin-icon {
-  background-image: url(img/pin_icon.svg);
-  background-repeat: no-repeat;
-  background-size: 10px 12px;
-  width: 10px;
-  height: 12px;
-  margin-right: 3px;
+  @include media($width-mid) {
+    background-image: url(img/pin_icon.svg);
+    background-repeat: no-repeat;
+    background-size: 10px 12px;
+    width: 10px;
+    height: 12px;
+    margin-right: 3px;
+  }
   @include media($width-max) {
     background-image: url(img/pin_icon.svg);
     background-size: 12px 15px;
@@ -569,31 +491,23 @@ cursor: pointer  }
     margin-right: 7px;
   }
 }
+
 .cart {
-  position: relative;
+  @include media($width-mid) {
+    position: relative;
+  }
 }
+
 .cart > * {
-  display: inline-block;
-  vertical-align: middle;
+  @include media($width-mid) {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 .cart-icon {
-  background-image: url(img/mobilecarticon.svg);
-  background-repeat: no-repeat;
-  background-size: 33px 30px;
-  width: 33px;
-  height: 30px;
-  @include media($width-xs) {
-    background-size: 44px 39px;
-    width: 44px;
-    height: 39px;
-  }
-  @include media($width-sm) {
-    background-size: 87px 77px;
-    width: 87px;
-    height: 77px;
-  }
   @include media($width-mid) {
     background-image: url(img/cart_icon.svg);
+    background-repeat: no-repeat;
     background-size: 18px 17px;
     width: 18px;
     height: 17px;
@@ -606,38 +520,13 @@ cursor: pointer  }
     margin-right: 0;
   }
 }
+
 .court-counter {
-  position: absolute;
-  top: -11px;
-  right: -10px;
-  width: 25px;
-  height: 25px;
-  background-color: #0075be;
-  font-family: 'Myriad Pro';
-  font-size: 13px;
-  font-weight: bold;
-  color: #ffffff;
-  border-radius: 35px;
-  text-align: center;
-  padding-top: 5px;
-  box-sizing: border-box;
-  @include media($width-xs) {
-    top: -14px;
-    right: -13px;
-    width: 33px;
-    height: 33px;
-    font-size: 17px;
-    padding-top: 7px;
-  }
-  @include media($width-sm) {
-    top: -17px;
-    right: -48px;
-    width: 65px;
-    height: 65px;
-    font-size: 34px;
-    padding-top: 14px;
-  }
   @include media($width-mid) {
+    background-color: #0075be;
+    font-weight: bold;
+    border-radius: 35px;
+    box-sizing: border-box;
     position: relative;
     right: 0;
     top: 0;

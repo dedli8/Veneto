@@ -1,7 +1,6 @@
 /*main menu styles starts*/
 
 .main-menu {
-  display: block;
   padding: 0;
   @include media($width-max) {
     margin: 0;
@@ -16,9 +15,6 @@
       font-size: 14px;
       margin-right: 15px;
     }
-    //@include media($width-xmax){
-    //  font-size: 17px;
-    //}
   }
   .main-menu-item:last-child {
     margin-right: 0;

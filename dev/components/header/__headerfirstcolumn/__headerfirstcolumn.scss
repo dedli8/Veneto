@@ -1,23 +1,17 @@
 /*header first column styles starts*/
 
 .header-first-column {
-  display: none;
-  flex-direction: column;
-  margin-right: 1%;
   @include media ($width-mid) {
     display: flex;
+    flex-direction: column;
+    margin-right: 1%;
   }
   @include media ($width-max) {
     font-size: 14px;
   }
-  //@include media ($width-xmax) {
-  //  font-size: 17px;
-  //}
   .sales {
-    display: none;
-    color: #fa0c3f;
     @include media($width-mid) {
-      display: block;
+      color: #fa0c3f;
     }
     @include media($width-max){
       margin-bottom: -1px;
@@ -25,56 +19,62 @@
   }
 
   .sales > * {
-    display: inline-block;
-    vertical-align: middle;
+    @include media($width-mid) {
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
   .icon-star {
-    background-image: url(img/star_icon.svg);
-    background-repeat: no-repeat;
-    background-size: 13px 11px;
-    width: 13px;
-    height: 11px;
+    @include media($width-mid) {
+      background-image: url(img/star_icon.svg);
+      background-repeat: no-repeat;
+      background-size: 13px 11px;
+      width: 13px;
+      height: 11px;
+    }
     @include media($width-max) {
       background-size: 15px 14px;
       width: 15px;
       height: 14px;
     }
-    //@include media($width-xmax){
-    //  width: 18px;
-    //  height: 17px;
-    //  background-size: 18px 17px;
-    //}
   }
   .stock {
-    margin-right: 17px;
+    @include media($width-mid){
+      margin-right: 17px;
+    }
     @include media($width-max) {
       margin-right: 20px;
     }
   }
-
   .stock > * {
-    display: inline-block;
+    @include media($width-mid) {
+      display: inline-block;
+    }
   }
-
   .stock a:last-child {
-    padding-bottom: 1px;
+    @include media($width-mid) {
+      padding-bottom: 1px;
+    }
   }
-
   .installment {
-    color: #0075be;
+    @include media($width-mid){
+      color: #0075be;
+    }
   }
-
   .installment > * {
-    vertical-align: middle;
+    @include media($width-mid) {
+      vertical-align: middle;
+    }
   }
-
   .installment span:first-child {
-    margin-right: 1px;
+    @include media($width-mid) {
+      margin-right: 1px;
+    }
   }
-
   .logo {
-    width: 177px;
-    //height: 22px;
+    @include media($width-mid) {
+      width: 177px;
+    }
     @include media($width-max) {
       width: 218px;
       height: 47px;
