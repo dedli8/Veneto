@@ -1,9 +1,9 @@
 @import "includes/settings";
 @import "includes/_fonts";
 @import "includes/_mixins";
-//@import "includes/_grid";
 
 /*main styles*/
+
 body{
   margin: 0;
 }
@@ -60,7 +60,8 @@ body{
 
 /*main styles ends*/
 
-//btnToTop styles starts
+/*btnToTop styles starts*/
+
 #btn-to-top {
   text-align: center;
   display: none;
@@ -86,10 +87,15 @@ body{
 #btn-to-top:hover {
   background-color: #555;
 }
-//btnToTop styles starts
+
+/*btnToTop styles ends*/
 
 
 @import "../../components/header/_header";
+@import "../../components/header/__headerfirstcolumn/__headerfirstcolumn";
+@import "../../components/header/__headersecondcolumn/__headersecondcolumn";
+@import "../../components/header/__mainmenu/_mainmenu";
+@import "../../components/header/__goodsmenu/_goodsmenu";
 @import "../../components/counterdown/counterdown";
 @import "../../components/banner/_banner";
 

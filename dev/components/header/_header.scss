@@ -1,4 +1,4 @@
-//header styles starts
+/*header styles starts*/
 
 .header {
   font-family: 'PragmaticaBook-Reg', sans-serif;
@@ -15,7 +15,7 @@
   @include media($width-mid) {
     padding-bottom: 6px;
     margin-bottom: 0;
-    //border-color: #0075be;
+    border-color: #0075be;
     padding-top: 20px;
   }
   @include media($width-max) {
@@ -27,10 +27,6 @@
       display: flex;
     }
   }
-
-  @import "__headerfirstcolumn/__headerfirstcolumn";
-  @import "__headersecondcolumn/__headersecondcolumn";
-  @import "__stockcounter/__stockcounter";
 }
 
 /*header end*/

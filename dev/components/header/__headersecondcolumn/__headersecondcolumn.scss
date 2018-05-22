@@ -54,8 +54,6 @@
   //}
 }
 
-@import "../__mainmenu/_mainmenu";
-
 .mobile-logo {
   width: 158px;
   //height: 22px;
@@ -403,6 +401,7 @@ cursor: pointer  }
 /*header second column second row styles starts*/
 
 .header-second-row {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -418,12 +417,9 @@ cursor: pointer  }
     margin-left: 0;
   }
   @include media($width-max) {
-    position: relative;
     top: -4px;
   }
 }
-
-@import "../__goodsmenu/_goodsmenu";
 
 .search-mobile-icon {
   background-image: url(img/mobilesearchicon.svg);

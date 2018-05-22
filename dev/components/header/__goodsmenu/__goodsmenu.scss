@@ -1,9 +1,7 @@
-//goods menu styles starts
+/*goods menu styles starts*/
 
 .goods-menu {
   display: none;
-  //position: relative;
-  //top: -2px;
   font-family: 'Days', sans-serif;
   font-size: 10.53px;
   align-self: center;
@@ -14,10 +12,12 @@
     font-size: 13px;
   }
   .goods-menu-item {
-    cursor: pointer;
     display: inline-block;
     vertical-align: middle;
     margin-right: 25px;
+    a{
+      cursor: pointer;
+    }
     &:hover{
       color: #0075be;
     }
@@ -56,7 +56,7 @@
     position: absolute;
     width: 9px;
     height: 9px;
-    top: 11px;
+    top: 20px;
     left: 43%;
     z-index: 0;
     border-left: 1px solid #0075be;
@@ -77,9 +77,11 @@
     display: inline-block;
     vertical-align: top;
     text-transform: uppercase;
-    font-size: 11px;
     font-family: "Days";
     margin-right: 30px;
+    &:last-child{
+      margin-right: 0;
+    }
     &:hover {
       color: #0075be;
     }
@@ -112,5 +114,84 @@
     margin-bottom: 0;
   }
 }
+/*stock counter sections starts*/
 
-//goods menu styles ends
+.section-stock-counterdown {
+  position: absolute;
+  width: 100%;
+  height: 189px;
+  bottom: -190px;
+  background-color: white;
+  display: none;
+  z-index: 1;
+}
+.dropdown-stock-counter-item{
+  width: 60%;
+  float: right;
+}
+
+.stock-counter-box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.stock-box {
+  font-family: "Days";
+  color: #ec0541;
+  display: inline-block;
+  text-align: center;
+  .amount-discont {
+    padding-top: 34px;
+    font-size: 34px;
+    margin-bottom: 5px;
+  }
+  .discont-good {
+    font-size: 16px;
+  }
+}
+
+.counterdown-wrap {
+  position: relative;
+  padding-top: 8px;
+  height: 146px;
+  @include media($width-max) {
+    margin-left: 16px;
+  }
+;
+}
+
+.counterdown-text-blocks {
+  padding-top: 2px;
+  box-sizing: border-box;
+  height: 26px;
+  text-align: center;
+  width: 236px;
+  display: inline-block;
+  font-family: "Myriad Pro";
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 13px;
+
+}
+
+.stock-ends {
+  background-color: #b81b41;
+  margin-bottom: 14px;
+  padding-left: 27px;
+  text-align: left;
+}
+
+.details {
+  background-color: #4274ba;
+  font-family: 'Days';
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/*stock counter section starts*/
+
+/*goods menu styles ends*/
